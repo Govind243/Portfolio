@@ -1,22 +1,29 @@
-<<<<<<< HEAD
-/* ===================== ROOT VARIABLES ===================== */
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
 :root {
     --primary: #2563eb;
     --secondary: #38bdf8;
     --dark: #020617;
     --light: #f8fafc;
     --text: #1f2933;
-    --card: #ffffff;
+    --card-bg: #ffffff;
 }
 
-/* ===================== RESET ===================== */
-* {
+/* =========================================================
+   RESET
+========================================================= */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===================== BASE ===================== */
+/* =========================================================
+   BASE STYLES
+========================================================= */
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9fafb;
@@ -27,13 +34,16 @@ body {
 a {
     color: var(--primary);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: var(--secondary);
 }
 
-/* ===================== HEADER ===================== */
+/* =========================================================
+   HEADER / HERO
+========================================================= */
 header {
     background: linear-gradient(135deg, #0f172a, #020617);
     color: var(--light);
@@ -52,7 +62,9 @@ header p {
     color: #e5e7eb;
 }
 
-/* ===================== NAV ===================== */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 nav {
     margin-top: 2rem;
 }
@@ -67,11 +79,11 @@ nav a {
 nav a::after {
     content: "";
     position: absolute;
-    width: 0;
-    height: 2px;
-    background: var(--secondary);
     left: 0;
     bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary);
     transition: width 0.3s ease;
 }
 
@@ -79,14 +91,18 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* ===================== MAIN ===================== */
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
 main {
     max-width: 1100px;
     margin: auto;
     padding: 3rem 1.5rem;
 }
 
-/* ===================== SECTIONS ===================== */
+/* =========================================================
+   SECTIONS
+========================================================= */
 section {
     margin-bottom: 4.5rem;
 }
@@ -96,23 +112,25 @@ section h2 {
     margin-bottom: 2rem;
     padding-left: 0.8rem;
     border-left: 6px solid var(--primary);
-    color: #020617;
+    color: var(--dark);
 }
 
-/* ===================== PROJECT CARDS ===================== */
+/* =========================================================
+   PROJECT CARDS
+========================================================= */
 article {
-    background: var(--card);
+    background-color: var(--card-bg);
     padding: 1.6rem 1.8rem;
     margin-bottom: 1.5rem;
     border-radius: 12px;
     border-left: 5px solid var(--secondary);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 article:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
 article h3 {
@@ -121,7 +139,9 @@ article h3 {
     color: #075985;
 }
 
-/* ===================== PROJECT BUTTONS ===================== */
+/* =========================================================
+   PROJECT BUTTONS
+========================================================= */
 .project-links {
     margin-top: 1rem;
 }
@@ -134,7 +154,6 @@ article h3 {
     color: var(--primary);
     font-size: 0.9rem;
     font-weight: 600;
-    text-decoration: none;
     transition: all 0.3s ease;
 }
 
@@ -145,8 +164,9 @@ article h3 {
     box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
 }
 
-
-/* ===================== CATEGORY COLOR CODING ===================== */
+/* =========================================================
+   CATEGORY COLOR CODING
+========================================================= */
 #wireless article {
     border-left-color: #22c55e;
 }
@@ -159,16 +179,20 @@ article h3 {
     border-left-color: #a855f7;
 }
 
-/* ===================== FOOTER ===================== */
+/* =========================================================
+   FOOTER
+========================================================= */
 footer {
-    background: var(--dark);
+    background-color: var(--dark);
     color: #cbd5f5;
     text-align: center;
     padding: 1.3rem;
     font-size: 0.9rem;
 }
 
-/* ===================== RESPONSIVE ===================== */
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2.1rem;
@@ -183,164 +207,3 @@ footer {
         font-size: 1.6rem;
     }
 }
-=======
-/* ===================== ROOT VARIABLES ===================== */
-:root {
-    --primary: #2563eb;
-    --secondary: #38bdf8;
-    --dark: #020617;
-    --light: #f8fafc;
-    --text: #1f2933;
-    --card: #ffffff;
-}
-
-/* ===================== RESET ===================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ===================== BASE ===================== */
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9fafb;
-    color: var(--text);
-    line-height: 1.7;
-}
-
-a {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--secondary);
-}
-
-/* ===================== HEADER ===================== */
-header {
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: var(--light);
-    text-align: center;
-    padding: 3.5rem 1.5rem;
-}
-
-header h1 {
-    font-size: 2.6rem;
-    letter-spacing: 1px;
-}
-
-header p {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #e5e7eb;
-}
-
-/* ===================== NAV ===================== */
-nav {
-    margin-top: 2rem;
-}
-
-nav a {
-    margin: 0 0.8rem;
-    font-weight: 500;
-    color: #e0e7ff;
-    position: relative;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: var(--secondary);
-    left: 0;
-    bottom: -4px;
-    transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-/* ===================== MAIN ===================== */
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 3rem 1.5rem;
-}
-
-/* ===================== SECTIONS ===================== */
-section {
-    margin-bottom: 4.5rem;
-}
-
-section h2 {
-    font-size: 1.9rem;
-    margin-bottom: 2rem;
-    padding-left: 0.8rem;
-    border-left: 6px solid var(--primary);
-    color: #020617;
-}
-
-/* ===================== PROJECT CARDS ===================== */
-article {
-    background: var(--card);
-    padding: 1.6rem 1.8rem;
-    margin-bottom: 1.5rem;
-    border-radius: 12px;
-    border-left: 5px solid var(--secondary);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-article:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-}
-
-article h3 {
-    font-size: 1.15rem;
-    margin-bottom: 0.5rem;
-    color: #075985;
-}
-
-/* ===================== CATEGORY COLOR CODING ===================== */
-#wireless article {
-    border-left-color: #22c55e;
-}
-
-#embedded article {
-    border-left-color: #f59e0b;
-}
-
-#vlsi article {
-    border-left-color: #a855f7;
-}
-
-/* ===================== FOOTER ===================== */
-footer {
-    background: var(--dark);
-    color: #cbd5f5;
-    text-align: center;
-    padding: 1.3rem;
-    font-size: 0.9rem;
-}
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.1rem;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 0.4rem;
-    }
-
-    section h2 {
-        font-size: 1.6rem;
-    }
-}
->>>>>>> 1bca4fa4482a772410a38dc48cc2cf21a5f7589c
